@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Please Come</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 20px rgba(0,0,0,.08);
+      padding: 2.5rem 2.5rem 3rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e5e5ea;
+      padding-bottom: 1.5rem;
+    }
+
+    .app-name {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #6e6e73;
+      margin-bottom: .35rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+
+    .updated {
+      font-size: .8rem;
+      color: #6e6e73;
+      margin-top: .4rem;
+    }
+
+    section { margin-bottom: 1.75rem; }
+
+    h2 {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #6e6e73;
+      margin-bottom: .6rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-size: .95rem;
+    }
+
+    ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #0071e3;
+    }
+
+    ul li strong { white-space: nowrap; }
+
+    code {
+      font-family: inherit;
+      font-size: .9em;
+      color: #3a3a3c;
+      background: #f0f0f5;
+      padding: .05em .35em;
+      border-radius: 4px;
+    }
+
+    .highlight-box {
+      background: #f5f5f7;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      font-size: .9rem;
+      color: #3a3a3c;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: .6rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: #e8f4fd;
+      color: #0071e3;
+      font-size: .78rem;
+      font-weight: 600;
+      padding: .3rem .75rem;
+      border-radius: 999px;
+    }
+
+    .badge.green { background: #e6f7ee; color: #1c7c45; }
+    .badge.gray  { background: #ebebeb; color: #3a3a3c; }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #e5e5ea;
+      font-size: .78rem;
+      color: #6e6e73;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <p class="app-name">Please Come</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective May 22, 2026</p>
+    </header>
+
+    <section>
+      <h2>Data Collected</h2>
+      <ul>
+        <li><strong>Student ID</strong> — entered by the user, stored locally on-device in AsyncStorage. Never sent to any server.</li>
+        <li><strong>Device UUID</strong> — auto-generated on first launch, stored in the iOS Keychain. Used only for local admin-unlock code verification. Never transmitted.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Broadcast</h2>
+      <div class="highlight-box">
+        The student ID is advertised over <strong>Bluetooth Low Energy</strong> as a local BLE device name, visible to nearby BLE scanners operated by the institution. It is not transmitted over the internet.
+      </div>
+    </section>
+
+    <section>
+      <h2>Data NOT Collected</h2>
+      <ul>
+        <li>No account, login, or password.</li>
+        <li>No location data — the <code>NSLocationWhenInUseUsageDescription</code> key exists only because iOS requires it for Bluetooth. The app never calls the location API.</li>
+        <li>No analytics, crash reporting, or third-party SDKs.</li>
+        <li>No data is ever sent to any remote server.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Retention</h2>
+      <p style="font-size:.95rem;">Student ID and device UUID persist on-device until the device lock is cleared by an admin. The Keychain UUID survives app deletion on iOS.</p>
+    </section>
+
+    <section>
+      <h2>Third Parties</h2>
+      <div class="badge-row">
+        <span class="badge green">&#10003; No third-party SDKs</span>
+        <span class="badge green">&#10003; No network calls</span>
+        <span class="badge green">&#10003; No backend</span>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 Please Come
+    </footer>
+  </div>
+</body>
+</html>
