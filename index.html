@@ -230,8 +230,9 @@
 			<ul>
 				<li><strong>Student ID</strong> — entered by the user, stored locally on-device in AsyncStorage. Never
 					sent to any server.</li>
-				<li><strong>Device UUID</strong> — auto-generated on first launch, stored in the iOS Keychain. Used only
-					for local admin-unlock code verification. Never transmitted.</li>
+				<li><strong>Device UUID</strong> — auto-generated on first launch, stored in the iOS Keychain. The first
+					8 characters are used for local admin-unlock code verification and the first 16 characters are used
+					in the service ID of the BLE service to prevent students from registering with their device multiple times.</li>
 			</ul>
 		</section>
 
@@ -298,7 +299,7 @@
 
 			<details>
 				<summary>I still have a question</summary>
-				<p class="details-body">Contact your institution's IT support desk.</p>
+				<p class="details-body">Contact e_bychkova@proton.me or your institution's IT support desk.</p>
 			</details>
 		</section>
 
